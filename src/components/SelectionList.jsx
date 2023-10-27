@@ -1,11 +1,8 @@
-import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import ListOptions from "./ListOptions";
 
-const SelectionList = () => {
-  // No se hace asi, hay que hacerlo con una lista y un boton que active y desactive y un use State
-  const [option, setOption] = useState("Filter by Region");
-  const [active, setActive] = useState(false);
+const SelectionList = ({ props }) => {
+  const { option, setOption, active, setActive } = props;
 
   return (
     <div className="w-[90%] mt-8 mx-auto">

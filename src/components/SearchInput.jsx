@@ -1,6 +1,12 @@
 import { BiSearchAlt2 } from "react-icons/bi";
 
-export const SearchInput = () => {
+export const SearchInput = ({ props }) => {
+  const { input, setInput } = props;
+
+  const handleChange = (e) => {
+    setInput(e.target.value);
+  };
+
   return (
     <div className="flex bg-white w-[90%] px-5 py-3 mx-auto rounded">
       <div className=" mr-2 text-gray-400">
@@ -10,6 +16,8 @@ export const SearchInput = () => {
         type="text"
         placeholder="Search for a country..."
         className=" text-xs w-[90%] ml-3"
+        value={input}
+        onChange={handleChange}
       />
     </div>
   );

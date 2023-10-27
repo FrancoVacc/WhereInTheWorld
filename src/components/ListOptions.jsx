@@ -1,7 +1,7 @@
 const ListOptions = ({ setOptions, active, setActive }) => {
   const classActive = "block w-[60%] bg-white py-2  rounded mt-1";
   const classhidden = "hidden";
-  const options = ["Africa", "America", "Asia", "Europa", "Oceania"];
+  const options = ["Africa", "America", "Asia", "Europe", "Oceania"];
 
   const handleClick = (option) => {
     setOptions(option.target.id);
