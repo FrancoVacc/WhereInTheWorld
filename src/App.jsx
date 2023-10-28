@@ -4,6 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { Home } from "./routes/Home";
 import NotFound from "./routes/NotFound";
 import LayoutPublic from "./layout/LayoutPublic";
+import Country, { loaderCountry } from "./routes/Country";
 
 export const router = createBrowserRouter([
   {
@@ -14,6 +15,11 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "/country/:id",
+        element: <Country />,
+        loader: loaderCountry,
       },
     ],
   },

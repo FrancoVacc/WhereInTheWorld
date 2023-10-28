@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import CountryCard from "../components/CountryCard";
 import { SearchInput } from "../components/SearchInput";
 import SelectionList from "../components/SelectionList";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   const [data, setData] = useState([]);
@@ -51,7 +52,7 @@ export const Home = () => {
       <div className="relative top-32">
         {data.map((item) => {
           return (
-            <div key={item.name.common}>
+            <Link key={item.name.common} to={`/country/${item.cca3}`}>
               <CountryCard
                 flag={item.flags.svg}
                 name={item.name.common}
@@ -59,7 +60,7 @@ export const Home = () => {
                 region={item.region}
                 capital={item.capital}
               />
-            </div>
+            </Link>
           );
         })}
       </div>
