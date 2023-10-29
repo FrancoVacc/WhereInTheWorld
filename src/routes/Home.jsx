@@ -45,11 +45,11 @@ export const Home = () => {
 
   return (
     <div className=" h-screen pt-5">
-      <div className="absolute z-10 w-[100%]">
+      <div className="absolute z-10 w-[100%] md:flex md:py-5 md:px-10 ">
         <SearchInput props={{ input, setInput }} />
         <SelectionList props={{ option, setOption, active, setActive }} />
       </div>
-      <div className="relative top-32">
+      <div className="relative top-32 md:flex md:flex-wrap ">
         {data.map((item) => {
           return (
             <Link key={item.name.common} to={`/country/${item.cca3}`}>

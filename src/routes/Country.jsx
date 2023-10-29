@@ -28,72 +28,78 @@ const Country = () => {
   return (
     <div className="w-[100%] mt-10">
       <CountryButton />
-      <img
-        src={newCountry.flags.svg}
-        alt="flag"
-        className="w-[80%] mx-auto my-10"
-      />
-      <div className=" w-[80%] mx-auto my-5">
-        <h2 className="  text-lg font-nunito font-bold">
-          {newCountry.name.common}
-        </h2>
-        <div className=" my-10">
-          <p className=" font-nunito font-bold text-sm">
-            Native Name:{" "}
-            <span className=" font-normal">{newCountry.name.common}</span>
-          </p>
-          <p className=" font-nunito font-bold text-sm">
-            Population:{" "}
-            <span className=" font-normal">{newCountry.population}</span>
-          </p>
-          <p className=" font-nunito font-bold text-sm">
-            Region: <span className=" font-normal">{newCountry.region}</span>
-          </p>
-          <p className=" font-nunito font-bold text-sm">
-            Sub Region:{" "}
-            <span className=" font-normal">{newCountry.subregion}</span>
-          </p>
-          <p className=" font-nunito font-bold text-sm">
-            Capital: <span className=" font-normal">{newCountry.capital}</span>
-          </p>
-        </div>
-        <div className=" my-10">
-          <p className=" font-nunito font-bold text-sm">
-            Top Level Domine:
-            <span className=" font-normal">{newCountry.tld}</span>
-          </p>
-          <p className=" font-nunito font-bold text-sm">
-            Currency:
-            {currency.map((cur) => {
-              return (
-                <span key={cur.name} className=" font-normal">
-                  {" "}
-                  {cur.name}
-                  {", "}
-                </span>
-              );
-            })}
-          </p>
-          <p className=" font-nunito font-bold text-sm">
-            Languagues:
-            {language.map((lan) => {
-              return (
-                <span key={lan} className=" font-normal">
-                  {" "}
-                  {lan}
-                  {", "}
-                </span>
-              );
-            })}
-          </p>
-        </div>
-      </div>
-      <div className="w-[80%] mx-auto flex justify-between flex-wrap ">
-        {newCountry.borders.map((border) => (
-          <div key={border}>
-            <CountryBorderBtn border={border} />
+      <div className="md:flex md:px-10">
+        <img
+          src={newCountry.flags.svg}
+          alt="flag"
+          className="w-[80%] md:w-[40%] md:h-[30%] mx-auto my-10 "
+        />
+
+        <div className=" w-[80%] mx-auto my-5 md:ml-20">
+          <h2 className="  text-lg font-nunito font-bold">
+            {newCountry.name.common}
+          </h2>
+          <div className=" my-10">
+            <p className=" font-nunito font-bold text-sm">
+              Native Name:{" "}
+              <span className=" font-normal">{newCountry.name.common}</span>
+            </p>
+            <p className=" font-nunito font-bold text-sm">
+              Population:{" "}
+              <span className=" font-normal">{newCountry.population}</span>
+            </p>
+            <p className=" font-nunito font-bold text-sm">
+              Region: <span className=" font-normal">{newCountry.region}</span>
+            </p>
+            <p className=" font-nunito font-bold text-sm">
+              Sub Region:{" "}
+              <span className=" font-normal">{newCountry.subregion}</span>
+            </p>
+            <p className=" font-nunito font-bold text-sm">
+              Capital:{" "}
+              <span className=" font-normal">{newCountry.capital}</span>
+            </p>
           </div>
-        ))}
+          <div className=" my-10">
+            <p className=" font-nunito font-bold text-sm">
+              Top Level Domine:
+              <span className=" font-normal">{newCountry.tld}</span>
+            </p>
+            <p className=" font-nunito font-bold text-sm">
+              Currency:
+              {currency.map((cur) => {
+                return (
+                  <span key={cur.name} className=" font-normal">
+                    {" "}
+                    {cur.name}
+                    {", "}
+                  </span>
+                );
+              })}
+            </p>
+            <p className=" font-nunito font-bold text-sm">
+              Languagues:
+              {language.map((lan) => {
+                return (
+                  <span key={lan} className=" font-normal">
+                    {" "}
+                    {lan}
+                    {", "}
+                  </span>
+                );
+              })}
+            </p>
+          </div>
+
+          <div className="w-[80%] mx-auto flex justify-between flex-wrap md:mx-0 md:w-[100%] md:align-middle ">
+            <p className=" font-nunito font-bold text-sm">Border Countryes:</p>
+            {newCountry.borders.map((border) => (
+              <div key={border}>
+                <CountryBorderBtn border={border} />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

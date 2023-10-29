@@ -1,5 +1,6 @@
 const ListOptions = ({ setOptions, active, setActive }) => {
-  const classActive = "block w-[60%] bg-white py-2  rounded mt-1";
+  const classActive =
+    "block w-[60%] md:w-auto bg-white py-2  rounded mt-1 shadow shadow-gray-300";
   const classhidden = "hidden";
   const options = ["Africa", "America", "Asia", "Europe", "Oceania"];
 
@@ -18,7 +19,7 @@ const ListOptions = ({ setOptions, active, setActive }) => {
           }}
         >
           <p
-            className=" px-4 py-1 text-xs font-nunito font-semibold my-2 hover:bg-Very-Dark-Blue-lm-text hover:text-Very-Light-Gray-lm-bg"
+            className=" px-4 py-1 text-xs font-nunito font-semibold my-2  hover:bg-Very-Dark-Blue-lm-text hover:text-Very-Light-Gray-lm-bg"
             id={option}
           >
             {option}
