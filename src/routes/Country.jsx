@@ -26,7 +26,7 @@ const Country = () => {
   }, []);
 
   return (
-    <div className="w-[100%] mt-10">
+    <section className="w-[100%] mt-10">
       <CountryButton />
       <div className="md:flex md:px-10">
         <img
@@ -101,7 +101,7 @@ const Country = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

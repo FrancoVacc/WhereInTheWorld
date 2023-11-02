@@ -44,7 +44,7 @@ export const Home = () => {
   }, [input]);
 
   return (
-    <div className=" h-screen pt-5">
+    <section className=" h-screen pt-5">
       <div className="absolute z-10 w-[100%] md:flex md:py-5 md:px-10 ">
         <SearchInput props={{ input, setInput }} />
         <SelectionList props={{ option, setOption, active, setActive }} />
@@ -64,6 +64,6 @@ export const Home = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
