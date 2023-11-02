@@ -7,8 +7,11 @@ const SelectionList = ({ props }) => {
   return (
     <div className="w-[90%] mt-8 mx-auto md:mt-0 md:flex md:flex-row-reverse">
       <div>
-        <div className="flex w-[60%] md:w-auto px-3 py-4 bg-white justify-between align-middle rounded shadow shadow-gray-300">
-          <p className=" text-xs font-nunito font-semibold"> {option}</p>
+        <div className="flex w-[60%] md:w-auto px-3 py-4 bg-white dark:bg-Dark-Blue justify-between align-middle rounded shadow shadow-gray-300 dark:shadow-none">
+          <p className=" text-xs font-nunito font-semibold dark:text-White-dm-text-lm-elements">
+            {" "}
+            {option}
+          </p>
           <div
             onClick={() => {
               if (active) {
@@ -17,6 +20,7 @@ const SelectionList = ({ props }) => {
                 setActive(true);
               }
             }}
+            className="dark:text-White-dm-text-lm-elements"
           >
             <IoIosArrowDown />
           </div>

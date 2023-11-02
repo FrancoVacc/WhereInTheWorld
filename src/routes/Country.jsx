@@ -35,7 +35,7 @@ const Country = () => {
           className="w-[80%] md:w-[40%] md:h-[30%] mx-auto my-10 "
         />
 
-        <div className=" w-[80%] mx-auto my-5 md:ml-20">
+        <div className=" w-[80%] mx-auto my-5 md:ml-20 dark:text-White-dm-text-lm-elements">
           <h2 className="  text-lg font-nunito font-bold">
             {newCountry.name.common}
           </h2>
